@@ -1,5 +1,4 @@
 ### Installing K3s (Server Node)
-### System Requirements
 
 **OS Requirements:**
 

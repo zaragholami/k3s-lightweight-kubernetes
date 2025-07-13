@@ -82,7 +82,7 @@ kubectl get nodes
 ```
 ---------------------------------------------
 
-#### 2.agent-setup (Worker)
+#### 2.Agent-Node (Worker)
 Get token from server (control-plane):
 ```
 sudo cat /var/lib/rancher/k3s/server/node-token

@@ -1,11 +1,50 @@
 ### Installing K3s (Server Node)
 ### System Requirements
-Linux (Ubuntu, CentOS, etc.)
 
-512MB+ RAM (1GB+ recommended)
+**OS Requirements:**
 
-Internet access (for script)
+64-bit Linux only (ARM64 and x86_64 supported)
 
+Kernel version ≥ 4.15
+
+cgroups v1 or v2 enabled (v2 required for rootless mode)
+
+iptables, ipset, and socat should be available
+
+UFW/Firewalld should allow K3s ports
+
+**supported OS:**
+
+Ubuntu,Debian,CentOS,RHEL (7, 8, 9),Rocky Linux (8, 9),AlmaLinux (8, 9),Oracle Linux (7, 8),openSUSE Leap (15.x),USE Linux Enterprise Server (SLES) (15.x)
+
+**Recommended OS:**
+
+Raspberry Pi OS (64-bit),Ubuntu Server for ARM,DietPi (lightweight and fast)
+
+**Container Runtime Compatibility**
+K3s uses containerd by default (built-in), so:
+Works out-of-the-box with `nerdctl`
+Download and install :
+```
+wget https://github.com/containerd/nerdctl/releases/download/v1.7.5/nerdctl-full-1.7.5-linux-amd64.tar.gz\
+tar zxvf nerdctl-full-1.7.5-linux-amd64.tar.gz -C /usr/local
+```
+Verify installation:
+```
+nerdctl --version
+```
+Add environment for K3s containerd:
+For use with K3s's containerd:
+```
+export CONTAINERD_NAMESPACE=k8s.io
+export CONTAINERD_ADDRESS=/run/k3s/containerd/containerd.sock
+```
+Add it to your shell config:
+```
+echo 'export CONTAINERD_NAMESPACE=k8s.io' >> ~/.bashrc\
+echo 'export CONTAINERD_ADDRESS=/run/k3s/containerd/containerd.sock' >> ~/.bashrc\
+source ~/.bashrc
+```
 #### 🖥️ 1.Server Node (Control Plane)
 #### 🔹 Basic Install
 ```

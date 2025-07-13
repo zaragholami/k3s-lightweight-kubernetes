@@ -1,8 +1,11 @@
 ### Installing K3s (Server Node)
 ### System Requirements
 Linux (Ubuntu, CentOS, etc.)
+
 512MB+ RAM (1GB+ recommended)
+
 Internet access (for script)
+
 #### 🖥️ 1.Server Node (Control Plane)
 #### 🔹 Basic Install
 ```

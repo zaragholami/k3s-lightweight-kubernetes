@@ -21,9 +21,13 @@ Ubuntu,Debian,CentOS,RHEL (7, 8, 9),Rocky Linux (8, 9),AlmaLinux (8, 9),Oracle L
 Raspberry Pi OS (64-bit),Ubuntu Server for ARM,DietPi (lightweight and fast)
 
 **Container Runtime Compatibility**
+
 K3s uses containerd by default (built-in), so:
+
 Works out-of-the-box with `nerdctl`
+
 Download and install :
+
 ```
 wget https://github.com/containerd/nerdctl/releases/download/v1.7.5/nerdctl-full-1.7.5-linux-amd64.tar.gz\
 tar zxvf nerdctl-full-1.7.5-linux-amd64.tar.gz -C /usr/local

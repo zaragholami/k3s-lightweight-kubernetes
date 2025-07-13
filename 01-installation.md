@@ -63,7 +63,7 @@ Traefik Ingress Controller
 
 containerd as runtime
 
-#### 🔹Specify K3s Version
+#### 🔹 OR Specify K3s Version
 ```
 curl -sfL https://get.k3s.io | INSTALL_K3S_VERSION="v1.28.5+k3s1" sh -
 ```
@@ -73,7 +73,7 @@ Ensuring consistency across nodes
 
 Avoiding unexpected updates
 
-#### 🔹Disable Flannel (for Custom CNI like Calico)
+#### 🔹 OR Disable Flannel (for Custom CNI like Calico)
 ```
 curl -sfL https://get.k3s.io | INSTALL_K3S_EXEC="--flannel-backend=none --disable-network-policy" sh -
 ```

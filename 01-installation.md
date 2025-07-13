@@ -3,7 +3,7 @@
 Linux (Ubuntu, CentOS, etc.)
 512MB+ RAM (1GB+ recommended)
 Internet access (for script)
-#### 🖥️ Server Node (Control Plane)
+#### 🖥️ 1.Server Node (Control Plane)
 #### 🔹 Basic Install
 ```
 curl -sfL https://get.k3s.io | sh -
@@ -55,7 +55,9 @@ Check node status
 kubectl get nodes -o wide
 ```
 Ensure `INTERNAL-IP` and `EXTERNAL-IP` are correct and `STATUS` is `Ready`
+
 optional: Customize Calico IP Pools
+
 If you want to define custom pod CIDRs (instead of default `192.168.0.0/16`):
 ```
 kubectl apply -f - <<EOF
@@ -78,7 +80,7 @@ Make sure this pool doesn't conflict with other networks (e.g. your home LAN)
 sudo systemctl status k3s
 kubectl get nodes
 ```
-### agent-setup (Worker)
+#### 2.agent-setup (Worker)
 Get token from server (control-plane):
 ```
 sudo cat /var/lib/rancher/k3s/server/node-token

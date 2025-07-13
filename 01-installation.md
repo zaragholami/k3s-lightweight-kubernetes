@@ -80,6 +80,8 @@ Make sure this pool doesn't conflict with other networks (e.g. your home LAN)
 sudo systemctl status k3s
 kubectl get nodes
 ```
+---------------------------------------------
+
 #### 2.agent-setup (Worker)
 Get token from server (control-plane):
 ```
